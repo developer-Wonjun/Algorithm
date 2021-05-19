@@ -1,0 +1,17 @@
+A = int(input())
+B = int(input())
+C = int(input())
+D = str(A*B*C)
+
+E = list(D)
+
+print(E.count('0'))
+print(E.count('1'))
+print(E.count('2'))
+print(E.count('3'))
+print(E.count('4'))
+print(E.count('5'))
+print(E.count('6'))
+print(E.count('7'))
+print(E.count('8'))
+print(E.count('9'))
