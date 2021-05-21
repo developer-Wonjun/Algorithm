@@ -6,3 +6,5 @@ for a in range(T):
     for i in array:
         t += int(R)*i
     print(t)
+
+
