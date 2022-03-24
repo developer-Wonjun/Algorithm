@@ -3,16 +3,18 @@ a = [(key,value) for key,value in enumerate(list(map(int,input().split())))]
 
 res =0
 b = a[M]
+print(b)
 while True:
 
-    if max(a[1]) == a[0][1]:
-        if min(a[0])
-    a.pop(0)
-    res +=1
+    l = a.pop(0)
+
+    if any(i[1] > l[1] for i in a):
+        a.append(l)
 
     else:
-        a.append(a.pop(0))
+        res +=1
     
     if b not in a:
         break
 
+print(res)
