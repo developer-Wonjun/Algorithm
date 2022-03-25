@@ -1,25 +1,25 @@
-a = list(map(str,input()))
-ad = {i:0 for i in a}
-b = list(map(str,input()))
-bd = {i:0 for i in a}
+a = input()
+b = input()
+da = dict()
+db = dict()
 res = 0
-
 for i in a:
-    ad[i] +=1
+    da[i] = da.get(i,0) +1
 for i in b:
-    bd[i]+=1
+    db[i] = db.get(i,0) +1
+print(da)
 
-for key,value in ad.items():
+for key,value in da.items():
     
-    aa = bd[key]
-
-    if aa == value:
-        res +=1
-
-if res == len(ad):
-    print('YES')
+    if key in db.keys():
+        aa = db[key]
+        if aa == value:
+            res +=1
+        else:
+            print('NO')
+            break
+    else:
+        print('NO')
+        break
 else:
-    print(res)
-    print('NO')
-
-print(len(ad))
+    print('YES')
